@@ -18,9 +18,9 @@ def draw_branch(x, y, length, direction, depth, angle):
     draw_branch(x2, y2, length * 0.7, direction + angle, depth - 1, angle)
 
 
-def draw_tree():
+def draw_tree(value=None):
     canvas.delete("all")
-    draw_branch(400, 550, 150, -90, 10, 25)
+    draw_branch(400, 550, 150, -90, 10, angle_slider.get())
 
 
 if __name__ == "__main__":
@@ -30,6 +30,18 @@ if __name__ == "__main__":
 
     canvas = tk.Canvas(window, width=800, height=600, bg="white")
     canvas.pack()
+
+    angle_slider = tk.Scale(
+        window,
+        from_=0,
+        to=90,
+        orient=tk.HORIZONTAL,
+        label="Угол ветвей (градусы)",
+        length=400,
+        command=draw_tree,
+    )
+    angle_slider.set(25)
+    angle_slider.pack()
 
     draw_tree()
     window.mainloop()
