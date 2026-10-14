@@ -28,37 +28,36 @@
 
 **1. Клонирование репозитория**
 
-git clone https://github.com/Eloote/fractal
+- git clone https://github.com/Eloote/fractal
 
 **2. Создание виртуального окружения**
 
 Создание виртуального окружения:
 
 macOS / Linux
-python3 -m venv venv
+- python3 -m venv venv
 
 Windows
-python -m venv venv
+- python -m venv venv
 
 **3. Активация виртуального окружения**
 
 macOS / Linux
-source venv/bin/activate
+- source venv/bin/activate
 
 Windows
-venv\Scripts\activate
+- venv\Scripts\activate
 
 **4. Установка зависимостей**
 
 Для проекта используются только стандартные средства Python и tkinter, поэтому установка сторонних библиотек не требуется.
 
 При наличии файла requirements.txt:
-
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 **5. Запуск программы**
 
-python main.py
+- python main.py
 
 ## Управление программой:
 Слайдер угла — изменение угла ветвления дерева
